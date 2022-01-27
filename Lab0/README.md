@@ -1,6 +1,3 @@
-# The largest heading
-## The second largest heading
-###### The smallest heading 
 # DELIVERABLES:
 
 1. Working single chip AM / FM radio

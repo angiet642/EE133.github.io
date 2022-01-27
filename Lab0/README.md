@@ -8,8 +8,8 @@
 3. Set of working cables
 - Two functional DuPont wires, approximately 6” long, one F/F and one M/F
 - Two functional 18 AWG power cables:
- - a red one approximately 24” long with banana plugs on both ends
- - a black one of the same length as the first with banana plugs on both ends
+  - a red one approximately 24” long with banana plugs on both ends
+  - a black one of the same length as the first with banana plugs on both ends
 - 5 ns (± 50 ps) of RG-58A/U cable terminated with BNC connectors on both ends
 4. An answer to the question “Where is the 50 Ω in the 50 Ω cable you just made?”
 5. Determination of “unknown” cable type

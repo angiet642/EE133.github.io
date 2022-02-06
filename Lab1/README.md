@@ -1,7 +1,7 @@
 # Lab 1: Using VNAs to Measure Parasitic Properties of Passive Componenets 
 
 ## Authors:
-Author: Angie Thai
+Author: Angie Thai\
 Lab Partner: Kylee Krzanich
 
 ## Abstract: 

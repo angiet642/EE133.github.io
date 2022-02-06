@@ -12,7 +12,7 @@ In this lab, the performance of passive components are measured within a frequen
 ## Measurements
 
 ## Simulation Results
-![Capacitor](https://github.com/angiet642/EE133.github.io/tree/main/Lab1/Lab1_Images/CAPACITOR.jpg?raw=true)
+![alt text](https://github.com/angiet642/EE133.github.io/tree/main/Lab1/Lab1_Images/Capacitor.jpg)
 
 ## Discussion
 

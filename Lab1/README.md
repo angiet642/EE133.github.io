@@ -58,7 +58,7 @@ After calibrating the NanoVNA, we measured blocks 1-12 on the RF demo kit to ver
 ### Measuring Capacitors and Inductors through SMA Connectors
 In this section of the lab, we soldered a 200 pF capacitor onto SMA connectors that were soldered onto a copper clad board. This was also repeated for a 330 nH inductor. The purpose of this experiment was to measure the self resonant frequency of the inductor and capacitor. We are interested in measuring the self resonant frequency because passive components are dominated by their parasitics once the frequency reaches beyond this value. 
 
-With a NanoVNA, we can visualize the self resonant frequency by analyzing the trace on the smith chart. In general, we learned that the bottom half of the smith chart represents the capacitive reigion, whereas the top half represents the inductive region.
+With a NanoVNA, we can visualize the self resonant frequency by analyzing the trace on the smith chart. The bottom half of the smith chart represents the capacitive reigion, whereas the top half represents the inductive region. We can identify the self resonant frequency of a capacitor by finding the frequency at which the trace of the smith chart crosses from the capactive region to the inductive region. The same applies to the inductor except now we want to find the crossover from the inductive region to the capacitive region. 
 
 <p align="center">
   <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/Picture13_200pf.png" width="500"> 

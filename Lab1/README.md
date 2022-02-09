@@ -5,7 +5,7 @@ Author: Angie Thai\
 Lab Partner: Kylee Krzanich
 
 ## Abstract: 
-Passive components are devices that do not generate energy or require power to operate, such as resistors, capacitors, and inductors. To analyze such devices, a vector network analyzer can be used to visualize and measure the properties of each component.  
+Passive components are devices that do not generate energy or require power to operate, such as resistors, capacitors, and inductors. To analyze such devices, a vector network analyzer can be used to visualize and measure the parasitic properties of each component. Measuring parasitics will give rise to an important observation relative to the frequency and impedance. This observation is known as the self-resonant frequency.   
 
 ## Introduction:
 In this lab, the performance of passive components are measured within a specified frequency band. These measurements were achieved using a vector network analyzer, a device that measures signals that pass through the device under test (DUT) and also the signals reflected back from the DUT. Thoughout the report, the transmitted signal will be referred to as the "S21" parameter, and the reflected signal will be referred to as the "S11" parameter. Measurements from the VNA include impedance measurements on a smith chart in addition to the magnitude of S21 and S11 signals. All measurements are swept through a predefined frequency range to show the continuous changes of a device as a function of frequency. 
@@ -96,6 +96,19 @@ Another way to visualize the self resonant frequency effect is by simulating the
 **Using the cursor, the self resonant frequency is approximately 505MHz for the simulated inductor.**
 
 ## Discussion
+Overall, we found the self-resonant frequencies to be: \
+~800 MHz for a 330 nH inductor \
+~336 MHZ for a 200 pf capacitor 
+
+In LTSpice simulations, the self-resonant frequencies are: \
+18.3 MHz for a 0.1uF Capacitor \
+505 MHz for a 200nF inductor 
+
+To calculate the self-resonant frequency, we can use the equation below if the parasitic values are known.
+<p align="center"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsW66-aeM90-AjHHNDqs0iN_Ph_5MxZrlm7Q&usqp=CAU" width="250"> </p>
+<p align = "center"> 'Self-Resonant Frequency Equation'</p> 
+
+In general, we must be mindful of the self-resonant frequency when designing our circuits to account for any undesireable factors. 
 
 ## Conclusion
 In conclusion, we were able to successfully use a NanoVNA to measure different functions of the RF demo kit board. This confirmed our learnings pertinent to the smith chart and gave us confidence in using smith chart for analysis. We were also able to simulate, measure, and interpret the self-resonant frequency of an inductor and capacitor using the VNA and LTspice. We now have a clear understanding of self-resonant frequency and how parasitics can corrupt the performance of a circuit if the operating frequency range is not chosen carefully. 

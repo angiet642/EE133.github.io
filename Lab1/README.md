@@ -64,7 +64,7 @@ With a NanoVNA, we can visualize the self resonant frequency by analyzing the tr
 <p align="center">
   <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/Picture13_200pf.png" width="500"> 
   <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/Picture14_Inductor%20-%20277-4-01-w%20item%20number_2929SQ-331JE.png" width="500"> 
-  </p><p align = "center"> 'Figure 19 & 20: VNA Measurements: 200 pF Capacitor and 330nH Inductor'
+  </p><p align = "center"> 'Figure 15 & 16: VNA Measurements: 200 pF Capacitor and 330nH Inductor'
 </p>
 
 
@@ -83,18 +83,19 @@ The reason this phenomenon occurs can be described through a more realisitic sch
 
 ## LTSpice Simulation Results
 Another way to visualize the self resonant frequency effect is by simulating the more "realistic" schematics of the components in LTspice. We use AC analysis for simulation so we can plot the impedance as a function of frequency.
-Using the cursor, the self resonant frequency is approximately 18.3MHz for the simulated capacitor.
 ![Capacitor](https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/Capacitor.JPG)
-</p><p align = "center"> 'Figure 21: Realistic Inductor Model Simulation'
 
-Using the cursor, the self resonant frequency is approximately 505MHz for the simulated inductor.
+</p><p align = "center"> 'Figure 19: Realistic Capacitor Model Simulation'</p>
+**Using the cursor, the self resonant frequency is approximately 18.3MHz for the simulated capacitor.**
 
 <p align="center">
   <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/Inductor.JPG"> 
   <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/inductor_ltspice.JPG" width="250"> 
-  </p><p align = "center"> 'Figure 22: Realistic Inductor Model Simulation'
+  </p><p align = "center"> 'Figure 20: Realistic Inductor Model Simulation'
 </p>
+**Using the cursor, the self resonant frequency is approximately 505MHz for the simulated inductor.**
 
 ## Discussion
 
 ## Conclusion
+In conclusion, we were able to successfully use a NanoVNA to measure different functions of the RF demo kit board. This confirmed our learnings pertinent to the smith chart and gave us confidence in using smith chart for analysis. We were also able to simulate, measure, and interpret the self-resonant frequency of an inductor and capacitor using the VNA and LTspice. We now have a clear understanding of self-resonant frequency and how parasitics can corrupt the performance of a circuit if the operating frequency range is not chosen carefully. 

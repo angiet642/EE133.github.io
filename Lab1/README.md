@@ -20,7 +20,7 @@ Prior to measuring the parasitic effects of a capacitor and inductor, we first f
 </p>
 
 ### Measuring the RF Demo Kit Board
-After calibrating the NanoVNA, we measured blocks 1-12 on the RF demo kit to verify the readings of various circuits as illustrated on the board. In general, our measurements were aligned with the illustrations on the board.
+After calibrating the NanoVNA, we measured blocks 1-12 on the RF demo kit to verify the readings of various circuits as illustrated on the board. Overall, we found that our measurements were aligned with the illustrations on the board.
 <p align="center">
   <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/Picture1.png" width="500"> 
   <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/Picture2.png" width="500"> 
@@ -55,7 +55,16 @@ After calibrating the NanoVNA, we measured blocks 1-12 on the RF demo kit to ver
   </p><p align = "center"> 'Figure 11 & 12: (Capacitor + R || L) & LRC Circuit'
 </p>
 
-## Measurements and Results
+### Measuring Capacitors and Inductors through SMA Connectors
+In this section of the lab, we soldered a 200 pF capacitor onto SMA connectors that were soldered onto a copper clad board. This was also repeated for a 330 nH inductor. The purpose of this experiment was to measure the self resonant frequency of the inductor and capacitor. We are interested in measuring the self resonant frequency because passive components are dominated by their parasitics once the frequency reaches beyond this value. 
+
+With a NanoVNA, we can visualize the self resonant frequency by analyzing the trace on the smith chart. In general, we learned that the bottom half of the smith chart represents the capacitive reigion, whereas the top half represents the inductive region.
+
+<p align="center">
+  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/Picture13_200pf.png" width="500"> 
+  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/Picture14_Inductor%20-%20277-4-01-w%20item%20number_2929SQ-331JE.png" width="500"> 
+  </p><p align = "center"> 'Figure 15 & 16: VNA Measurements: 200 pF Capacitor and 330nH Inductor'
+</p>
 
 ## Simulation Results
 ![Capacitor](https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/Capacitor.JPG)

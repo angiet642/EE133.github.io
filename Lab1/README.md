@@ -1,4 +1,4 @@
-# Lab 1: Using VNAs to Measure Parasitic Properties of Passive Componenets 
+# Lab 1: Measuring Parasitic Properties of Passive Components with a VNA
 
 ## Authors:
 Author: Angie Thai\

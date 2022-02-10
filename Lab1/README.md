@@ -60,11 +60,18 @@ In this section of the lab, we soldered a 200 pF capacitor onto SMA connectors t
 
 With a NanoVNA, we can visualize the self resonant frequency by analyzing the trace on the smith chart. The bottom half of the smith chart represents the capacitive reigion, whereas the top half represents the inductive region. We can identify the self resonant frequency of a capacitor by finding the frequency at which the trace of the smith chart crosses from the capactive region to the inductive region. The same applies to the inductor except now we want to find the crossover from the inductive region to the capacitive region. 
 
+<p align="center">
+  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/coppler_clad.jpg" width="500">  
+  </p><p align = "center"> 'Figure 13: VNA Measurements: 200 pF Capacitor and 330nH Inductor'
+</p>
+
+
+
 
 <p align="center">
   <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/Picture13_200pf.png" width="500"> 
   <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/Picture14_Inductor%20-%20277-4-01-w%20item%20number_2929SQ-331JE.png" width="500"> 
-  </p><p align = "center"> 'Figure 15 & 16: VNA Measurements: 200 pF Capacitor and 330nH Inductor'
+  </p><p align = "center"> 'Figure 14 & 15: VNA Measurements: 200 pF Capacitor and 330nH Inductor'
 </p>
 
 
@@ -72,12 +79,12 @@ The reason this phenomenon occurs can be described through a more realisitic sch
 
 <p align="center">
   <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/Capacitor_model.png" width="500"> 
-  </p><p align = "center"> 'Figure 17: Realistic Capacitor Model'
+  </p><p align = "center"> 'Figure 16: Realistic Capacitor Model'
 </p>
 
 <p align="center">
   <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/inductor_model.png" width="300"> 
-  </p><p align = "center"> 'Figure 18: Realistic Inductor Model'
+  </p><p align = "center"> 'Figure 17: Realistic Inductor Model'
 </p>
 
 
@@ -85,13 +92,13 @@ The reason this phenomenon occurs can be described through a more realisitic sch
 Another way to visualize the self resonant frequency effect is by simulating the more "realistic" schematics of the components in LTspice. We use AC analysis for simulation so we can plot the impedance as a function of frequency.
 ![Capacitor](https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/Capacitor.JPG)
 
-</p><p align = "center"> 'Figure 19: Realistic Capacitor Model Simulation'</p>
+</p><p align = "center"> 'Figure 18: Realistic Capacitor Model Simulation'</p>
 **Using the cursor, the self resonant frequency is approximately 18.3MHz for the simulated capacitor.**
 
 <p align="center">
   <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/Inductor.JPG"> 
   <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/inductor_ltspice.JPG" width="250"> 
-  </p><p align = "center"> 'Figure 20: Realistic Inductor Model Simulation'
+  </p><p align = "center"> 'Figure 19: Realistic Inductor Model Simulation'
 </p>
 **Using the cursor, the self resonant frequency is approximately 505MHz for the simulated inductor.**
 

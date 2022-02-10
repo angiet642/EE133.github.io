@@ -93,14 +93,15 @@ Another way to visualize the self resonant frequency effect is by simulating the
 ![Capacitor](https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/Capacitor.JPG)
 
 </p><p align = "center"> 'Figure 18: Realistic Capacitor Model Simulation'</p>
-**Using the cursor, the self resonant frequency is approximately 18.3MHz for the simulated capacitor.**
+** Using the cursor, the self resonant frequency is approximately 18.3MHz for the simulated capacitor. **
 
 <p align="center">
   <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/Inductor.JPG"> 
   <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/inductor_ltspice.JPG" width="250"> 
   </p><p align = "center"> 'Figure 19: Realistic Inductor Model Simulation'
 </p>
-**Using the cursor, the self resonant frequency is approximately 505MHz for the simulated inductor.**
+
+** Using the cursor, the self resonant frequency is approximately 505MHz for the simulated inductor. **
 
 ## Discussion
 Overall, we found the self-resonant frequencies to be: \

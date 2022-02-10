@@ -90,10 +90,14 @@ The reason this phenomenon occurs can be described through a more realisitic sch
 
 ## LTSpice Simulation Results
 Another way to visualize the self resonant frequency effect is by simulating the more "realistic" schematics of the components in LTspice. We use AC analysis for simulation so we can plot the impedance as a function of frequency.
-![Capacitor](https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/Capacitor.JPG)
 
-</p><p align = "center"> 'Figure 18: Realistic Capacitor Model Simulation'</p>
-**Using the cursor, the self resonant frequency is approximately 18.3MHz for the simulated capacitor. **
+
+<p align="center">
+  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/Capacitor.JPG> 
+  </p><p align = "center"> 'Figure 18: Realistic Capacitor Model Simulation'
+</p>
+
+__Using the cursor, the self resonant frequency is approximately 18.3MHz for the simulated capacitor__
 
 <p align="center">
   <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/Inductor.JPG"> 
@@ -101,7 +105,7 @@ Another way to visualize the self resonant frequency effect is by simulating the
   </p><p align = "center"> 'Figure 19: Realistic Inductor Model Simulation'
 </p>
 
-**Using the cursor, the self resonant frequency is approximately 505MHz for the simulated inductor. **
+__Using the cursor, the self resonant frequency is approximately 505MHz for the simulated inductor.__
 
 ## Discussion
 Overall, we found the self-resonant frequencies to be: \

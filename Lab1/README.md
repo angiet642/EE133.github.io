@@ -62,7 +62,7 @@ With a NanoVNA, we can visualize the self resonant frequency by analyzing the tr
 
 <p align="center">
   <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/coppler_clad.jpg" width="500">  
-  </p><p align = "center"> 'Figure 13: VNA Measurements: 200 pF Capacitor and 330nH Inductor'
+  </p><p align = "center"> 'Figure 13: VNA Measurements: 200 pF Capacitor and 330nH Inductor + Copper Clad'
 </p>
 
 

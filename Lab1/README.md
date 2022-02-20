@@ -16,13 +16,13 @@ Prior to measuring the parasitic effects of a capacitor and inductor, we first f
 
 <p align="center">
 <img src="https://m.media-amazon.com/images/I/81smXiQSngL._SL1500_.jpg" width="400">
-<img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/RF_DemoKIt.jpg" width="400">
+<img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/RF_DemoKIt.jpg" width="400" hspace="50"/>
 </p>
 
 ### Measuring the RF Demo Kit Board
-After calibrating the NanoVNA, we measured blocks 1-12 on the RF demo kit to verify the readings of various circuits as illustrated on the board. Overall, we found that our measurements were aligned with the illustrations on the board.
+After calibrating the NanoVNA, we measured blocks 1-12 on the RF demo kit to verify the readings of various circuits as illustrated on the board. Overall, we found that our smith trace and measurements were aligned with the illustrations on the board.
 <p align="center">
-  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/Picture1.png" width="500"> 
+  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/Picture1.png" width="500" > 
   <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/Picture2.png" width="500"> 
   <p align = "center"> 'Figure 1 & 2: Low Pass and High Pass Filter'</p>
 </p>
@@ -91,9 +91,8 @@ The reason this phenomenon occurs can be described through a more realisitic sch
 ## LTSpice Simulation Results
 Another way to visualize the self resonant frequency effect is by simulating the more "realistic" schematics of the components in LTspice. We use AC analysis for simulation so we can plot the impedance as a function of frequency.
 
-
 <p align="center">
-  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/Capacitor.JPG> 
+  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab1/Lab1_Images/Capacitor.JPG"> 
   </p><p align = "center"> 'Figure 18: Realistic Capacitor Model Simulation'
 </p>
 
@@ -108,19 +107,25 @@ __Using the cursor, the self resonant frequency is approximately 18.3MHz for the
 __Using the cursor, the self resonant frequency is approximately 505MHz for the simulated inductor.__
 
 ## Discussion
-Overall, we found the self-resonant frequencies to be: \
-~800 MHz for a 330 nH inductor \
-~336 MHZ for a 200 pf capacitor 
-
-In LTSpice simulations, the self-resonant frequencies are: \
-18.3 MHz for a 0.1uF Capacitor \
-505 MHz for a 200nF inductor 
-
-To calculate the self-resonant frequency, we can use the equation below if the parasitic values are known.
-<p align="center"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsW66-aeM90-AjHHNDqs0iN_Ph_5MxZrlm7Q&usqp=CAU" width="250"> </p>
+To calculate the self-resonant frequency, we can use the equation below if the parasitic values are known. We can also compare the expected vs actual measurements, which are summarized in table 1 and 2 below. 
+<p align="center"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsW66-aeM90-AjHHNDqs0iN_Ph_5MxZrlm7Q&usqp=CAU" width="150"> </p>
 <p align = "center"> 'Self-Resonant Frequency Equation'</p> 
 
-In general, we must be mindful of the self-resonant frequency when designing our circuits to account for any undesireable factors. 
+__Table 1: Comparison between LTSpice and Hand Calculation__
+|Component | Hand Calculation  | LTSpice Measurements |  
+| ------------- | ------------- | ------------- | 
+| 0.1uF Capacitor| 18.377 MHz | 18.3 MHz | 
+|100nF Inductor| 503.3 MHZ| 505 MHz |
+
+__Table 2: Comparison between NanoVNA and datasheet__
+|Component | Data Sheet Spec  | NanoVNA Measurements |  
+| ------------- | ------------- | ------------- | 
+| 200 pf Silver Mica Capacitor| 336.27 MHz (if ESL = 1.12 nH) | 336 MHz | 
+| 330 nH Inductor| 660 MHZ [Datasheet](https://octopart.com/2929sq-331jec-coilcraft-24518110)| 800 MHz |
+
+In table 2, I was unable to find the datasheet for the capacitor used. Therefore, I calculateed what the expected ESL should be to achieve the result from the NanoVNA measurement. According to this [article](https://resources.altium.com/p/which-type-capacitor-should-you-use), the Silver Mica Capacitor should have low ESR/ESL values. Thus, we should expect a ESL that is small to maintain high precision of the component. 
+
+For the 300 nH inductor, we see that our NanoVNA measurement differs from the datasheet by +140 MHz. This large discrepency is unexpected. One possibility that may have contributed to the error is due to distance between the SMA connectors that the inductor was soldered between. In lab, we struggled with soldering the inductor between the two SMA connectors because our connectors were far apart compared to other groups. We were cautious when moving the legs of the inductor to align with our SMA connector layout, however, we may have stretched the inductor coil during this process. When the inductor is stretched, the coils are less compact, which yields a weaker magnetic field. This would have decreased the inductance, which would have increased the self resonating frequency measurement. This proves that stretching the inductor is likely the cause for the high measurement from the NanoVNA. To reduce the error, we should have moved the SMA connectors closer together and leave the inductor legs untouched.
 
 ## Conclusion
-In conclusion, we were able to successfully use a NanoVNA to measure different functions of the RF demo kit board. This confirmed our learnings pertinent to the smith chart and gave us confidence in using smith chart for analysis. We were also able to simulate, measure, and interpret the self-resonant frequency of an inductor and capacitor using the VNA and LTspice. We now have a clear understanding of self-resonant frequency and how parasitics can corrupt the performance of a circuit if the operating frequency range is not chosen carefully. 
+In conclusion, we were able to successfully use a NanoVNA to measure different functions of the RF demo kit board. This confirmed our learnings pertinent to the smith chart and gave us confidence in using smith chart for analysis. We were also able to simulate, measure, and interpret the self-resonant frequency of an inductor and capacitor using the VNA and LTspice. We now have a clear understanding of self-resonant frequency and how parasitics can corrupt the performance of a circuit if the operating frequency range is not chosen carefully. In other words, we must be mindful of the self-resonant frequency when designing our circuits to account for any undesireable factors. Furthermore, we have added the NanoVNA to our measurement toolbox for future works. 

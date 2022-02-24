@@ -32,8 +32,6 @@ Now that the boards are connected, we followed a circuit python [tutorial](https
 - Clock 1: 13.55 MHz
 - Clock 2: 10.706 kHz 
 
-These waveforms were also measured on an ocsilloscope and spectrum analyzer, which will be discussed in the results section. The reason I included a snippet of the code below is to show the comments that clearly describe how the clock generator synthesizer is set up to generate the different output clock frequencies. We see that the common factor used between the 3 clock outputs is 25 MHz, which is the frequency of the crystal inside the chip. This frequency is multipled (using the PLL's) to create an "intermediate" clock at a higher frequency, before it is divided to achieve the desired output frequency. Overall, the code decribes how the functional blocks are used in the block diagram from figure 2, which matches the funtional description in the Si5331 [datasheet](https://cdn-shop.adafruit.com/datasheets/Si5351.pdf)
-
 ```python
   /* INTEGER ONLY MODE --> most accurate output */
   /* Setup PLLA to integer only mode @ 900MHz (must be 600..900MHz) */
@@ -60,6 +58,8 @@ These waveforms were also measured on an ocsilloscope and spectrum analyzer, whi
   clockgen.setupMultisynth(2, SI5351_PLL_B, 900, 0, 1);
   clockgen.setupRdiv(2, SI5351_R_DIV_64);
 ```
+
+From the code, we can see how the clock generator synthesizer is set up to generate the different output clock frequencies. We first notice that the common factor used between the three clock outputs is 25 MHz, which is the frequency of the crystal inside the chip. This frequency is multipled (using the PLL's) to create an "intermediate" clock at a higher frequency before it is divided to achieve the desired output frequency. Overall, the code decribes the purpose of each functional block according to the block diagram from figure 2, which matches the funtional description in the Si5331 [datasheet](https://cdn-shop.adafruit.com/datasheets/Si5351.pdf). The next section discusses the measurements of the clock waveforms on an ocsilloscope and spectrum analyzer.
 
 ## Results
 Now that we have understood how the PLL's and synthesizers are used to generate the different clock frequencies, we can verify outputs by taking measurements on an oscilloscope and spectrum analyzer. At each clock output, we expect to see a square wave.

@@ -21,7 +21,7 @@ The Si5351 is a programmable clock generator that can generate frequencies from 
 </p>
 
 ## Procedure
-This lab required using an ItsyBitsy to interface with the Si5351 clock generator. Therefore, we began by soldering pin headers to the breakout board and mounting the components on a breadboard. Once this was complete, wired connections were made between the ItsyBitsy and the Si5351 I2C and power ports. The final assembly is shown in Figure 3.
+This lab required using an ItsyBitsy to interface with the Si5351 clock generator. Therefore, we began by soldering pin headers to the breakout board and mounting the components onto a breadboard. Once this was complete, wired connections were made between the ItsyBitsy and the Si5351 I2C and power ports. The final assembly is shown in Figure 3.
 <p align="center">
   <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab2/Lab2_image/IMG_9278.jpg" width="400"> 
   <p align = "center"> 'Figure 3: Si5351 breakout board connected to an ItsyBitsy MCU'</p>

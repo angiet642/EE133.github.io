@@ -78,7 +78,7 @@ In figures 6 and 7, we measured the 13.55 MHz clock output. On the oscilloscope,
   <p align = "center">  <b>'Figures 6,7: Time/Frequency Measurement of Clock Frequency at 13.55 MHz'</b></p>
 </p>
 
-In figures 8 and 9, we measured the 112.5 MHz clock output. On the oscilloscope, we noticed that the square wave is visibly distorted. This distortion goes hand-in-hand with the large bandwith shown at center frequency of 112.5 MHz. This indicates that there is strong frequency content around the center frequency.
+In figures 8 and 9, we measured the 112.5 MHz clock output. On the oscilloscope, we noticed that the square wave is visibly distorted. This distortion goes hand-in-hand with the large bandwith shown at center frequency of 112.5 MHz, which indicates that there is strong frequency content present around the center frequency.
 <p align="center">
   <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab2/Lab2_image/IMG_5028.JPG" width="500"> 
   <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab2/Lab2_image/IMG_5034.JPG" width="500"> 
@@ -87,6 +87,9 @@ In figures 8 and 9, we measured the 112.5 MHz clock output. On the oscilloscope,
 
 
 ## Discussion
+An interesting observation from our measurements is that the square wave measurement became distorted as the frequency of the clock generated increased. In the datasheet, we were warned that certain oscilloscopes may be unable to accurately measure the 112 MHz waveform. This led me to investigate the model of the oscilloscope that we used, which was the "__DSO6054A Oscilloscope: 500 MHz, 4 Analog Channels__". According to the datasheet, the oscilloscope is capable of measuring waveforms up to 500 MHz; therefore the oscilloscope was not the cause of the distortion in the clock waveform. We also ruled out oscilloscope probes as a source of error/potential bandwidth limiter since we directly used SMA to BNC connectors for our measurements. With the oscilloscope probes, we saw a more sinusoidal waveform in the time domain for the high frequency output. This meant that a direct connection between the SMA and BNC was in our favor and gave us a "better" result. 
 
+Since the oscilloscope was not the root cause of distortion, the other possiblity could be due to high frequency attenuation. We know that square waves can be decomposed into various out of phase sinusoidal waves at high frequencies. Therefore, it is possible that frequencies beyond 14-112 MHz that help make up the high-frequency square wave are filtered out by parasitic capacitors from the PCB board.  
 
 ## Conclusion
+Using the Si5351, we were able to explore how PLL's and synthesizers can be used to generate different output clock frequencies based on a single resonant crystal. The functionality of the chip is then described through code via circuit python, which allowed us to control the chip through the ItsyBitsy MCU I2C channels. This lab gave us better intution about clock generators and their internal structure/behavior while considering how external factors can effect high frequency signals. Furthermore, interfacting with the embedded devices through hardware and software gave us transferrable skills for future projects that may involve putting together different modules to achieve some goal.

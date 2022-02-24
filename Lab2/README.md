@@ -61,7 +61,7 @@ Now that the boards are connected, we followed a circuit python [tutorial](https
 
 From the code, we can see how the clock generator synthesizer is set up to generate the different output clock frequencies. We first notice that the common factor used between the three clock outputs is 25 MHz, which is the frequency of the crystal inside the chip. This frequency is multipled (using the PLL's) to create an "intermediate" clock at a higher frequency before it is divided to achieve the desired output frequency. Overall, the code decribes the purpose of each functional block according to the block diagram from figure 2, which matches the funtional description in the Si5331 [datasheet](https://cdn-shop.adafruit.com/datasheets/Si5351.pdf). The next section discusses the measurements of the clock waveforms on an ocsilloscope and spectrum analyzer.
 
-## Results
+## Measurements and Observations
 Now that we have understood how the PLL's and synthesizers are used to generate the different clock frequencies, we can verify outputs by taking measurements on an oscilloscope and spectrum analyzer. At each clock output, we expect to see a square wave.
 
 In figures 4 and 5, we measured the 10.706 kHz clock output. On the oscilloscope, we noticed that the square wave is very clear with no visible distortion. In the frequency domain, it is clear that maximum amplitude is around the center frequency of 10.5kHz. 

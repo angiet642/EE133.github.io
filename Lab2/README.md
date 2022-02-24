@@ -27,12 +27,10 @@ This lab required using an ItsyBitsy to interface with the Si5351 clock generato
   <p align = "center"> 'Figure 3: Si5351 breakout board connected to an ItsyBitsy MCU'</p>
 </p>
 
-Now that the boards are connected, we followed a circuit python [tutorial](https://learn.adafruit.com/adafruit-si5351-clock-generator-breakout/circuitpython) to control the output clocks of the Si5351 board. 
-
-Below is a snippet of the code that was used to generate the clock waveforms at various frequencies. 
+Now that the boards are connected, we followed a circuit python [tutorial](https://learn.adafruit.com/adafruit-si5351-clock-generator-breakout/circuitpython) to control the output clocks of the Si5351 board. Below is a snippet of the code that was used to generate the clock waveforms at various frequencies. 
 - Clock 0: 112.5 MHZ
 - Clock 1: 13.55 MHz
-- Clock 2: 10.706 KHz 
+- Clock 2: 10.706 kHz 
 
 These waveforms were also measured on an ocsilloscope and spectrum analyzer, which will be discussed in the results section. The reason I included a snippet of the code below is to show the comments that clearly describe how the clock generator synthesizer is set up to generate the different output clock frequencies. We see that the common factor used between the 3 clock outputs is 25 MHz, which is the frequency of the crystal inside the chip. This frequency is multipled (using the PLL's) to create an "intermediate" clock at a higher frequency, before it is divided to achieve the desired output frequency. Overall, the code decribes how the functional blocks are used in the block diagram from figure 2, which matches the funtional description in the Si5331 [datasheet](https://cdn-shop.adafruit.com/datasheets/Si5351.pdf)
 
@@ -64,29 +62,31 @@ These waveforms were also measured on an ocsilloscope and spectrum analyzer, whi
 ```
 
 ## Results
-Now that we have understood how the PLL's and synthesizers are used to generate the different clock frequencies, we can verify outputs by taking measurements on an oscilloscope and spectrum analyzer. 
-<p align="center">
-  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab2/Lab2_image/IMG_5028.JPG" width="500"> 
-  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab2/Lab2_image/IMG_5034.JPG" width="500"> 
-  <p align = "center"> 'Figures 4,5: Time domain representation of each channel'</p>
-</p>
+Now that we have understood how the PLL's and synthesizers are used to generate the different clock frequencies, we can verify outputs by taking measurements on an oscilloscope and spectrum analyzer. At each clock output, we expect to see a square wave.
 
-
-<p align="center">
-  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab2/Lab2_image/IMG_5029.JPG" width="500">
-  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab2/Lab2_image/IMG_5035.JPG" width="500"> 
-  <p align = "center"> 'Figures 6,7: Frequency domain representation of each channel'</p>
-</p>
-
+In figures 4 and 5, we measured the 10.706 kHz clock output. On the oscilloscope, we noticed that the square wave is very clear with no visible distortion. In the frequency domain, it is clear that maximum amplitude is around the center frequency of 10.5kHz. 
 <p align="center">
   <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab2/Lab2_image/IMG_5030.JPG" width="500"> 
   <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab2/Lab2_image/IMG_5036.JPG" width="500"> 
-  <p align = "center"> 'Figures 8,9: Frequency domain representation of each channel'</p>
+  <p align = "center">  <b>'Figures 4,5: Time/Frequency Measurement of Clock Frequency at 10.706 kHz'</b></p>
+</p>
+
+In figures 6 and 7, we measured the 13.55 MHz clock output. On the oscilloscope, we noticed that the square wave is more visible, but has slight distortion. In the frequency domain, it is clear that maximum amplitude is around a center frequency of 13.5MHz. However, the peak has a larger bandwidth compared to the 10.7kHz output, indicating that  other frequencies are present; therefore distorting the square wave shape of the output.
+<p align="center">
+  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab2/Lab2_image/IMG_5029.JPG" width="500">
+  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab2/Lab2_image/IMG_5035.JPG" width="500"> 
+  <p align = "center">  <b>'Figures 6,7: Time/Frequency Measurement of Clock Frequency at 13.55 MHz'</b></p>
+</p>
+
+In figures 8 and 9, we measured the 112.5 MHz clock output. On the oscilloscope, we noticed that the square wave is visibly distorted. This distortion goes hand-in-hand with the large bandwith shown at center frequency of 112.5 MHz. This indicates that there is strong frequency content around the center frequency.
+<p align="center">
+  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab2/Lab2_image/IMG_5028.JPG" width="500"> 
+  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab2/Lab2_image/IMG_5034.JPG" width="500"> 
+  <p align = "center"> <b>'Figures 8,9: Time/Frequency Measurement of Clock Frequency at 112.5 MHZ'</b></p>
 </p>
 
 
-
-##Discussion
+## Discussion
 
 
 ## Conclusion

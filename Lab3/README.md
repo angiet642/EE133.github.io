@@ -7,6 +7,10 @@ Lab Partner: Kylee Krzanich
 In this lab, a double balanced FET ring mixer was built. The choice to create a FET ring mixer was based on its ability to switch more robustly with less leakage current, unlike the diode ring mixer. Although the FET ring mixer appears more ideal in a switching sense, intrinsic and extrinsic capacitances of the MOSFET are introduced. This could potentially create nonidealities, especially at higher frequencies.
 
 ## Background:
+Types of Mixers
+| Diode Ring  | FET Ring |  Gilbert Cell |
+|-------------------|-------------------| -------------------|
+| <img src="https://www.electronics-notes.com/images/mixer-double-balanced-circuit-01.svg" width="400"> | <img src="https://www.electronics-notes.com/images/mixer-double-balanced-fet-circuit-01.png" width="500"> |<img src="https://www.researchgate.net/profile/Giovanni-Piccinni/publication/320373836/figure/fig1/AS:590496279838720@1517796692383/Architecture-of-a-conventional-double-balanced-Gilbert-cell-mixer.png" width="600">
 
 #### Acronyms 
 - __Definition of a mixer:__ A device that generates the sum or difference frequencies of two input signals. They can be referred to other names, such as modulators, demodulators, multipliers, synchronous detectors, phase detectors, upconverters or downcoonverters.
@@ -32,7 +36,7 @@ __Materials Needed__
 
 | Figure #1  | Figure #2  |
 |-------------------|-------------------|
-| <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/Schematic.JPG" width="500"> | <img src="https://www.electronics-notes.com/images/mixer-double-balanced-fet-circuit-01.png" width="500"> |
+| <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/Schematic.JPG" width="600"> | <img src="https://www.electronics-notes.com/images/mixer-double-balanced-fet-circuit-01.png" width="300"> |
 
 
 

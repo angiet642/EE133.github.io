@@ -30,6 +30,12 @@ __Materials Needed__
 3. [(3) RF transformers](https://www.minicircuits.com/pdfs/ADT4-1WT+.pdf) 
 4. (3) SMA connectors
 
+| Figure #1  | Figure #2  |
+|-------------------|-------------------|
+| <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/Schematic.JPG" width="500"> | <img src="https://www.electronics-notes.com/images/mixer-double-balanced-fet-circuit-01.png" width="500"> |
+
+
+
 __Measurements__
 - 1 dB compression point
 - LO leakage (and how do you know that peak is the LO leakage?)

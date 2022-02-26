@@ -1,5 +1,4 @@
 # Lab 3: Building a MOSFET Ring Mixer
-## Authors:
 Author: Angie Thai\
 Lab Partner: Kylee Krzanich
 
@@ -41,33 +40,40 @@ __Measurements__
   
   
 <p align="center">
-  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9299.jpg" width="500"> 
+  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9299.jpg" width="300"> 
   <p align = "center"> 'Figure 1'</p>
 </p>
 
 ## Discussion
 
 ### Mixing Results
-<p align="center">
-  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9297.jpg" width="500"> 
-  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9296.jpg" width="500"> 
-  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9291.jpg" width="500"> 
-  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9295.jpg" width="500"> 
 
-  <p align = "center"> 'Figure 1'</p>
-</p>
+| Figure #1  | Figure #2  |
+|-------------------|-------------------|
+| <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9297.jpg" width="500"> | <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9296.jpg" width="500"> |
 
-### Measurements
-<p align="center">
-  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-5065.JPG" width="500"> 
-  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-5066.JPG" width="500"> 
-  <p align = "center"> 'Figure 1'</p>
-</p>
-<p align="center">
-  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-5064.JPG" width="500"> 
-  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-5067.JPG" width="500"> 
-  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-5068.JPG" width="500"> 
-  <p align = "center"> 'Figure 1'</p>
-</p>
+| Figure #3  | Figure #4  |
+|-------------------|-------------------|
+| <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9291.jpg" width="500"> | <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9295.jpg" width="500"> |
+<p align = "center"> 'Figure 1'</p>
+
+### Mixer Performance Measurements
+
+| Figure #5  | Figure #6  |
+|-------------------|-------------------|
+| <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-5065.JPG" width="500"> | <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-5066.JPG" width="500"> |
+
+| Figure #7  | Figure #8  |
+|-------------------|-------------------|
+| <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-5064.JPG" width="500"> | <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-5067.JPG" width="500"> |
+
+
+| Figure #9  |
+|-------------------|
+| <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-5068.JPG" width="500"> |
+
+
+## Discussions
+
 
 ## Conclusion

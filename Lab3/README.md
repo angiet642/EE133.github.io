@@ -11,6 +11,7 @@ Types of Mixers
 | Diode Ring  | FET Ring |  Gilbert Cell |
 |-------------------|-------------------| -------------------|
 | <img src="https://www.electronics-notes.com/images/mixer-double-balanced-circuit-01.svg" width="400"> | <img src="https://www.electronics-notes.com/images/mixer-double-balanced-fet-circuit-01.png" width="500"> |<img src="https://www.researchgate.net/profile/Giovanni-Piccinni/publication/320373836/figure/fig1/AS:590496279838720@1517796692383/Architecture-of-a-conventional-double-balanced-Gilbert-cell-mixer.png" width="600">
+<p align = "center"> Table 1: Various Mixer Circuits </p>
 
 #### Acronyms 
 - __Definition of a mixer:__ A device that generates the sum or difference frequencies of two input signals. They can be referred to other names, such as modulators, demodulators, multipliers, synchronous detectors, phase detectors, upconverters or downcoonverters.
@@ -34,12 +35,28 @@ __Materials Needed__
 3. [(3) RF transformers](https://www.minicircuits.com/pdfs/ADT4-1WT+.pdf) 
 4. (3) SMA connectors
 
-| Figure #1  | Figure #2  |
+| Schematic  | Assembly |
 |-------------------|-------------------|
-| <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/Schematic.JPG" width="600"> | <img src="https://www.electronics-notes.com/images/mixer-double-balanced-fet-circuit-01.png" width="300"> |
+| <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/Schematic.JPG" width="600"> | <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9299.jpg" width="300"> |
+
+<p align = "center"> Table 2: Schematic and Assembly </p>
 
 
 
+ 
+## Discussion
+
+### Mixing Results
+
+| Figure #1: LO Frequency  | Figure #2: RF Frequency  |
+|-------------------|-------------------|
+| <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9297.jpg" width="500"> | <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9296.jpg" width="500"> |
+
+| Figure #3: Mixer Result  | Figure #4: Better Mixer (Courtesy of Greig Scott)  |
+|-------------------|-------------------|
+| <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9291.jpg" width="500"> | <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9295.jpg" width="500"> |
+
+### Mixer Performance Measurements
 __Measurements__
 - 1 dB compression point
 - LO leakage (and how do you know that peak is the LO leakage?)
@@ -47,27 +64,6 @@ __Measurements__
 - picture of spur levels
 - minimum IF frequency
 
-  
-  
-<p align="center">
-  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9299.jpg" width="300"> 
-  <p align = "center"> 'Figure 1'</p>
-</p>
-
-## Discussion
-
-### Mixing Results
-
-| Figure #1  | Figure #2  |
-|-------------------|-------------------|
-| <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9297.jpg" width="500"> | <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9296.jpg" width="500"> |
-
-| Figure #3  | Figure #4  |
-|-------------------|-------------------|
-| <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9291.jpg" width="500"> | <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9295.jpg" width="500"> |
-<p align = "center"> 'Figure 1'</p>
-
-### Mixer Performance Measurements
 
 | Figure #5  | Figure #6  |
 |-------------------|-------------------|

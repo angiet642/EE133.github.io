@@ -7,19 +7,20 @@ Lab Partner: Kylee Krzanich
 In this lab, a double balanced FET ring mixer was built. The choice to create a FET ring mixer was based on its ability to switch more robustly with less leakage current, unlike the diode ring mixer. Although the FET ring mixer appears more ideal in a switching sense, intrinsic and extrinsic capacitances of the MOSFET are introduced. This could potentially create nonidealities, especially at higher frequencies.
 
 ## Background:
-Types of Mixers
-| Diode Ring  | FET Ring |  Gilbert Cell |
-|-------------------|-------------------| -------------------|
-| <img src="https://www.electronics-notes.com/images/mixer-double-balanced-circuit-01.svg" width="400"> | <img src="https://www.electronics-notes.com/images/mixer-double-balanced-fet-circuit-01.png" width="500"> |<img src="https://www.researchgate.net/profile/Giovanni-Piccinni/publication/320373836/figure/fig1/AS:590496279838720@1517796692383/Architecture-of-a-conventional-double-balanced-Gilbert-cell-mixer.png" width="600">
-<p align = "center"> Table 1: Various Mixer Circuits </p>
-
-#### Acronyms 
-- __Definition of a mixer:__ A device that generates the sum or difference frequencies of two input signals. They can be referred to other names, such as modulators, demodulators, multipliers, synchronous detectors, phase detectors, upconverters or downcoonverters.
+__Definition of a mixer:__ A device that generates the sum or difference frequencies of two input signals. They can be referred to other names, such as modulators, demodulators, multipliers, synchronous detectors, phase detectors, upconverters or downcoonverters.
 - __IF:__ Intermediate Frequency
 - __RF:__ Receieved Frequency
 - __LO:__ Local oscillator
 - __Downconversion:__ 
 - __Upconversion:__
+
+
+#### Types of Mixers
+| Diode Ring  | FET Ring |  Gilbert Cell |
+|-------------------|-------------------| -------------------|
+| <img src="https://www.electronics-notes.com/images/mixer-double-balanced-circuit-01.svg" width="400"> | <img src="https://www.electronics-notes.com/images/mixer-double-balanced-fet-circuit-01.png" width="500"> |<img src="https://www.researchgate.net/profile/Giovanni-Piccinni/publication/320373836/figure/fig1/AS:590496279838720@1517796692383/Architecture-of-a-conventional-double-balanced-Gilbert-cell-mixer.png" width="600">
+<p align = "center"> Table 1: Various Mixer Circuits </p>
+
 
 #### Performance Measures
 - __Conversion Gain:__ Power of desired IF output/RF power input (dB)

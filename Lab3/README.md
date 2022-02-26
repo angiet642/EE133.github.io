@@ -5,18 +5,69 @@ Lab Partner: Kylee Krzanich
 
 ## Abstract: 
 
+In this lab, a double balanced FET ring mixer was built. The choice to create a FET ring mixer was based on its ability to switch more robustly with less leakage current, unlike the diode ring mixer. Although the FET ring mixer appears more ideal in a switching sense, intrinsic and extrinsic capacitances of the MOSFET are introduced. This could potentially create nonidealities, especially at higher frequencies.
 
-## Introduction:
+## Background:
+
+#### Acronyms 
+- __Definition of a mixer:__ A device that generates the sum or difference frequencies of two input signals. They can be referred to other names, such as modulators, demodulators, multipliers, synchronous detectors, phase detectors, upconverters or downcoonverters.
+- __IF:__ Intermediate Frequency
+- __RF:__ Receieved Frequency
+- __LO:__ Local oscillator
+- __Downconversion:__ 
+- __Upconversion:__
+
+#### Performance Measures
+- __Conversion Gain:__ Power of desired IF output/RF power input (dB)
+- __Noise Figure:__
+- __Linearity and Isolation:__
+- __Spurious responses (spurs):__
+
 ## Procedure
+
+__Materials Needed__
+1. (1) Perf board
+2. [(1)Broadband Quad MOSFET Array](https://www.psemi.com/pdf/datasheets/pe4141ds.pdf) 
+3. [(3) RF transformers](https://www.minicircuits.com/pdfs/ADT4-1WT+.pdf) 
+4. (3) SMA connectors
+
+__Measurements__
+- 1 dB compression point
+- LO leakage (and how do you know that peak is the LO leakage?)
+- conversion gain (loss) vs LO drive level (like the graph we saw on the slides today)
+- picture of spur levels
+- minimum IF frequency
+
+  
+  
 <p align="center">
-  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_images/IMG_9299.jpg" width="500"> 
+  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9299.jpg" width="500"> 
   <p align = "center"> 'Figure 1'</p>
 </p>
 
 ## Discussion
 
+### Mixing Results
 <p align="center">
-  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_images/IMG_9291.HEIC" width="500"> 
+  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9297.jpg" width="500"> 
+  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9296.jpg" width="500"> 
+  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9291.jpg" width="500"> 
+  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9295.jpg" width="500"> 
+
   <p align = "center"> 'Figure 1'</p>
 </p>
+
+### Measurements
+<p align="center">
+  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-5065.JPG" width="500"> 
+  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-5066.JPG" width="500"> 
+  <p align = "center"> 'Figure 1'</p>
+</p>
+<p align="center">
+  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-5064.JPG" width="500"> 
+  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-5067.JPG" width="500"> 
+  <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-5068.JPG" width="500"> 
+  <p align = "center"> 'Figure 1'</p>
+</p>
+
 ## Conclusion

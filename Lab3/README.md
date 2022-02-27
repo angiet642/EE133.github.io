@@ -61,7 +61,7 @@ After assembling the mixer, the function generated is used to generate waveforms
 | <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9297.jpg" width="500"> | <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9296.jpg" width="500"> |
 <p align = "center"> Table 3: Function Generater Setup </p>
 
-The expected result is to see two peaks, one at 7 MHz (the difference of the two frequencies) and 13 MHz (the addition of the two frequencies). This particular set-up uses a low-side downconversion since LO is smaller than the RF signal. In figures 3 and 4, the comparison is made between two FET ring mixers. The two figures show the difference and addition of the RF and LO channels. However, figure 3 shows a large peak at 3 MHz. This indicates that there is a large LO leakage due to poor LO and RF isolation unlike the mixer in figure 4, which does not show a large peak at the LO frequency. The mixer in figure 4 was used as a baseline or example of an "ideal" FET mixer created with the same components by Greig Scott. The difference in performance between the two mixers is likely caused by poor contact at the pins of the MOSFET ring. This component was difficult to solder without shorting the pins, which took several attempts. 
+The expected result is to see two peaks, one at 7 MHz (the difference of the two frequencies) and 13 MHz (the addition of the two frequencies). This particular set-up uses a low-side downconversion since LO is smaller than the RF signal. In figures 3 and 4, the comparison is made between two FET ring mixers. The two figures show the difference and addition of the RF and LO channels. However, figure 3 shows a large peak at 3 MHz. This indicates that there is a large LO leakage due to poor LO and RF isolation unlike the mixer in figure 4, which does not show a large peak at the LO frequency. The mixer in figure 4 was used as a baseline or example of an "ideal" FET mixer created with the same components by Greig Scott. The difference in performance between the two mixers is likely caused by poor contact at the pins of the MOSFET ring. This component was difficult to solder without shorting the pins, which took several attempts. The presence of other peaks are also known as "spurs" which was defined as the unwanted frequencies that were unintentionally mixed. 
 
 | Figure #3: Mixer Result  | Figure #4: Better Mixer (Courtesy of Greig Scott)  |
 |-------------------|-------------------|
@@ -72,8 +72,6 @@ The expected result is to see two peaks, one at 7 MHz (the difference of the two
 A week later, the mixer in figure 3, along with the mixer in figure 4 was no longer functional. After careful debugging with a DMM and microscope, the conclusion was that a component in the assembly was "blown" and could not be recreated due to limited parts. Thus, the following measurements were taken from a third mixer of the same topology, but constructed by Kylee Krzanich.
 
 __Measurements__
-- conversion gain (loss) vs LO drive level (like the graph we saw on the slides today)
-- picture of spur levels
 
 For this set up, the LO (12 MHz) is greater than the RF (2 MHz) signal. Thus, the system is a high-side down converter.
 
@@ -90,9 +88,9 @@ In the figures below, the peaks appear at 8 MHz and 14 MHz as expected. The purp
 
 
 The Conversion Gain/Loss of the RF Mixer = Output IF power [dBm] – RF input power[dBm]. \
-For this mixer, the conversion loss was around 9 db.
+For this mixer, the conversion loss was around 9 db. According to [digikey](https://www.digikey.com/en/articles/the-basics-of-mixers#:~:text=The%20purpose%20of%20the%20mixer,at%20the%20other%20two%20ports.), typical values of conversion loss are between 4.5 to 9 dB. This indicates that the conversion loss for FET mixers to be relatively high, which is one of the trade offs for passive FET mixers.
 
-The minimum IF frequency can be measured by setting the RF and LO channel to have a small frequency difference. Then, the RF frequency is decreased until the IF frequency becomes distorted as shown below. 
+The minimum IF frequency can be measured by setting the RF and LO channel to have a small frequency difference. Then, the RF frequency is decreased until the IF frequency becomes distorted as shown below. For this mixer, the minimum IF frequency was 30 kHz. Typically, caution is taken to avoid mixing to __zero__ IF because this would put the IF at the flicker noise band, which occurs at lower frequencies due to defects in the conductive channels.
 
 
 | Figure #9  |
@@ -101,11 +99,28 @@ The minimum IF frequency can be measured by setting the RF and LO channel to hav
 
 
 ## Discussions
-We talked about the 1dB compression point. Why is this an important performance metric? Can we change it? If so, how might we do that?
-There was some discussion about LO leakage. Why is that important and what can be done about that?
-Did you use your mixer as an up converter? As a down converter? If you didn't try both of these, why not?
-Did you measure the conversion gain vs LO drive level. I guess you must have if you determined the 1dB compression point. How did you make those measurements? Was this at a single frequency? If so was there anything special about the frequency you chose? If you did the measurements at different frequencies, did you find about the same result?
-There were a number of questions about why one would be concerned about the minimum IF frequency. Greig pointed out that the diode ring mixer should "go to DC" but that the FET ring wouldn't. Why might that be something one would be concerned about? What about the Gilbert cell mixer; should that "go to DC"? Does all this have anything to do with zero IF SDR's or radar stuff?
-In the mixer you built, why wouldn't the mixer go to zero IF? What could be done if you want it to go to zero IF?
+__ Summary of results__
+- 1dB compression point = 15 dB
+- Conversion loss = 9 db
+- Minimum IF Frequency = 30 kHz
+
+#### Takeaways:
+__Compression Point__
+- It is important to find the 1dB compression point for a mixer because it is the point at which the mixer does not behave linearly and becomes unpredictable. 
+- Operating far from the 1dB compression point will result in lower distortion and levels of spurious output frequencies. 
+- To improve the 1dB compression point, one can analyze the RF signal chain to find the saturated regions and attempt to improve the dynamic range for signal block. 
+- For a diode ring mixer, the compression point can be improved by using higher turn on diodes. This allows for a high RF power to be applied without impacting the diodes, but also requires a larger LO to switch the diodes.
+
+__LO Leakage__
+- LO leakage occurs from poor LO to RF or LO to IF isolation. 
+- To elimate the LO leakage, one can generate a signal that is equal in amplitude but opposite in phase as described in this [article from analog devices](https://www.analog.com/en/analog-dialogue/articles/transmit-lo-leakage-lol-an-issue-of-zero-if-that-isn-t-making-people-laugh-out-loud.html 
+
+__Minimum IF__
+- Greig pointed out that the diode ring mixer should "go to DC" but that the FET ring wouldn't.
+- Why might that be something one would be concerned about? 
+- What about the Gilbert cell mixer; should that "go to DC"? Does all this have anything to do with zero IF SDR's or radar stuff?
+- In the mixer you built, why wouldn't the mixer go to zero IF? 
+- What could be done if you want it to go to zero IF?
 
 ## Conclusion
+At the end of this lab, key performance indicators of the FET ring mixer were documented and analyzed. Nonidealities were also observed, which resulted in discussions related to avoiding or improving such outcomes.

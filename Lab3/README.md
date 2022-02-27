@@ -97,28 +97,28 @@ The minimum IF frequency can be measured by setting the RF and LO channel to hav
 
 
 ## Discussions
-__ Summary of results__
+__Summary of results__
 - 1dB compression point = 15 dB
 - Conversion loss = 9 db
 - Minimum IF Frequency = 30 kHz
 
-#### Takeaways:
-__Compression Point__
-- It is important to find the 1dB compression point for a mixer because it is the point at which the mixer does not behave linearly and becomes unpredictable. 
-- Operating far from the 1dB compression point will result in lower distortion and levels of spurious output frequencies. 
-- To improve the 1dB compression point, one can analyze the RF signal chain to find the saturated regions and attempt to improve the dynamic range for signal block. 
-- For a diode ring mixer, the compression point can be improved by using higher turn on diodes. This allows for a high RF power to be applied without impacting the diodes, but also requires a larger LO to switch the diodes.
+__Takeaways__ \
+  __1. Compression Point__
+  - It is important to find the 1dB compression point for a mixer because it is the point at which the mixer does not behave linearly and becomes unpredictable. 
+  - Operating far from the 1dB compression point will result in lower distortion and levels of spurious output frequencies. 
+  - To improve the 1dB compression point, one can analyze the RF signal chain to find the saturated regions and attempt to improve the dynamic range for signal block. 
+  - For a diode ring mixer, the compression point can be improved by using higher turn on diodes. This allows for a high RF power to be applied without impacting the diodes, but also requires a larger LO to switch the diodes.
 
-__LO Leakage__
-- LO leakage occurs from poor LO to RF or LO to IF isolation. 
-- To elimate the LO leakage, one can generate a signal that is equal in amplitude but opposite in phase as described in this [article from analog devices](https://www.analog.com/en/analog-dialogue/articles/transmit-lo-leakage-lol-an-issue-of-zero-if-that-isn-t-making-people-laugh-out-loud.html 
+  __2. LO Leakage__
+  - LO leakage occurs from poor LO to RF or LO to IF isolation. 
+  - To elimate the LO leakage, one can generate a signal that is equal in amplitude but opposite in phase as described in this [article from analog devices](https://www.analog.com/en/analog-dialogue/articles/transmit-lo-leakage-lol-an-issue-of-zero-if-that-isn-t-making-people-laugh-out-loud.html 
 
-__Minimum IF__
-- Greig pointed out that the diode ring mixer should "go to DC" but that the FET ring wouldn't.
-- Why might that be something one would be concerned about? 
-- What about the Gilbert cell mixer; should that "go to DC"? Does all this have anything to do with zero IF SDR's or radar stuff?
-- In the mixer you built, why wouldn't the mixer go to zero IF? 
-- What could be done if you want it to go to zero IF?
+  __3. Minimum IF__
+  - Greig pointed out that the diode ring mixer should "go to DC" but that the FET ring wouldn't.
+  - Why might that be something one would be concerned about? 
+  - What about the Gilbert cell mixer; should that "go to DC"? Does all this have anything to do with zero IF SDR's or radar stuff?
+  - In the mixer you built, why wouldn't the mixer go to zero IF? 
+  - What could be done if you want it to go to zero IF?
 
 ## Conclusion
 At the end of this lab, key performance indicators of the FET ring mixer were documented and analyzed. Nonidealities were also observed, which resulted in discussions related to avoiding or improving such outcomes.

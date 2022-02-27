@@ -27,11 +27,10 @@ __Some Definitions__
 
 #### Types of Mixers
 There are several types of mixer circuits. For the purpose of this lab, the focus will be on double balanced mixers, which uses differential circuits at the input to minimize the presence of unwanted RF and LO signals at the output. Double balanced mixers are also widely used because they yield increased linearity and better supression of spurs. Some examples of double balanced mixers are shown below. The following sections will discuss the steps to build a FET ring. 
-| Diode Ring  | FET Ring |  Gilbert Cell |
+| Figure 1: Diode Ring  | Figure 2: FET Ring |  Figure 3: Gilbert Cell |
 |-------------------|-------------------| -------------------|
 | <img src="https://www.electronics-notes.com/images/mixer-double-balanced-circuit-01.svg" width="400"> | <img src="https://www.electronics-notes.com/images/mixer-double-balanced-fet-circuit-01.png" width="500"> |<img src="https://www.researchgate.net/profile/Giovanni-Piccinni/publication/320373836/figure/fig1/AS:590496279838720@1517796692383/Architecture-of-a-conventional-double-balanced-Gilbert-cell-mixer.png" width="600">
 <p align = "center"> Table 1: Various Mixer Circuits </p>
-
 
 ## Procedure
 
@@ -43,7 +42,7 @@ To construct a passive FET ring mixer, the following items are needed:
 
 The datasheet can be referenced to understand how the MOSFET ring chip can be connected to the three different baluns as illustrated below. Once the connections were established, the components were mounted onto a solderable perf board. SMA connectors are used as an interface between the mixer and the spectrum analyzer + function generator.
 
-| Schematic  | Assembly |
+| Figure 4: Schematic  | Figure 5: Assembly |
 |-------------------|-------------------|
 | <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/Schematic.JPG" width="600"> | <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9299.jpg" width="300"> |
 
@@ -56,14 +55,14 @@ The datasheet can be referenced to understand how the MOSFET ring chip can be co
 
 After assembling the mixer, the function generated is used to generate waveforms on the RF and LO channels. The IF channel is connected to the spectrum analyzer to visualize the mixed frequencies.  In the table below, the LO channel is set to 3 MHz and the RF channel is set to 10 MHz.   
 
-| Figure #1: LO Frequency  | Figure #2: RF Frequency  |
+| Figure #6: LO Frequency  | Figure #7: RF Frequency  |
 |-------------------|-------------------|
 | <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9297.jpg" width="500"> | <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9296.jpg" width="500"> |
 <p align = "center"> Table 3: Function Generater Setup </p>
 
 The expected result is to see two peaks, one at 7 MHz (the difference of the two frequencies) and 13 MHz (the addition of the two frequencies). This particular set-up uses a low-side downconversion since LO is smaller than the RF signal. In figures 3 and 4, the comparison is made between two FET ring mixers. The two figures show the difference and addition of the RF and LO channels. However, figure 3 shows a large peak at 3 MHz. This indicates that there is a large LO leakage due to poor LO and RF isolation unlike the mixer in figure 4, which does not show a large peak at the LO frequency. The mixer in figure 4 was used as a baseline or example of an "ideal" FET mixer created with the same components by Greig Scott. The difference in performance between the two mixers is likely caused by poor contact at the pins of the MOSFET ring. This component was difficult to solder without shorting the pins, which took several attempts. The presence of other peaks are also known as "spurs" which was defined as the unwanted frequencies that were unintentionally mixed. 
 
-| Figure #3: Mixer Result  | Figure #4: Better Mixer (Courtesy of Greig Scott)  |
+| Figure #8: Mixer Result  | Figure #9: Better Mixer (Courtesy of Greig Scott)  |
 |-------------------|-------------------|
 | <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9291.jpg" width="500"> | <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-9295.jpg" width="500"> |
 <p align = "center"> Table 4: Comparisons between two mixers </p>
@@ -73,14 +72,14 @@ A week later, the mixer in figure 3, along with the mixer in figure 4 was no lon
 
 For this set up, the LO (12 MHz) is greater than the RF (2 MHz) signal. Thus, the system is a high-side down converter.
 
-| Figure #5  | Figure #6  |
+| Figure #10  | Figure #11  |
 |-------------------|-------------------|
 | <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-5065.JPG" width="500"> | <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-5066.JPG" width="500"> |
 <p align = "center"> Table 5: Function Generator Set-Up </p>
 
 In the figures below, the peaks appear at 8 MHz and 14 MHz as expected. The purpose of figure 8 was to show the measurement of the maximum IF gain at the 1dB compression point. To find the 1dB compression point, the amplitude of the RF signal was increased by 1dB at a time until the IF amplitude was no longer increased by the same amount. This measurement was around 15 dB for the particular mixer. For typical MOSFET mixers, the 1dB compression point is generally 3db higher than the LO power level.
 
-| Figure #7  | Figure #8  |
+| Figure #12  | Figure #13  |
 |-------------------|-------------------|
 | <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-5064.JPG" width="500"> | <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-5067.JPG" width="500"> |
 
@@ -91,7 +90,7 @@ For this mixer, the conversion loss was around 9 db. According to [digikey](http
 The minimum IF frequency can be measured by setting the RF and LO channel to have a small frequency difference. Then, the RF frequency is decreased until the IF frequency becomes distorted as shown below. For this mixer, the minimum IF frequency was 30 kHz. Typically, caution is taken to avoid mixing to __zero__ IF because this would put the IF at the flicker noise band, which occurs at lower frequencies due to defects in the conductive channels.
 
 
-| Figure #9  |
+| Figure #14  |
 |-------------------|
 | <img src="https://github.com/angiet642/EE133.github.io/blob/main/Lab3/Lab3_Images/IMG-5068.JPG" width="500"> |
 
@@ -114,11 +113,26 @@ __Takeaways__ \
   - To elimate the LO leakage, one can generate a signal that is equal in amplitude but opposite in phase as described in this [article from analog devices](https://www.analog.com/en/analog-dialogue/articles/transmit-lo-leakage-lol-an-issue-of-zero-if-that-isn-t-making-people-laugh-out-loud.html 
 
   __3. Minimum IF__
-  - Greig pointed out that the diode ring mixer should "go to DC" but that the FET ring wouldn't.
-  - Why might that be something one would be concerned about? 
-  - What about the Gilbert cell mixer; should that "go to DC"? Does all this have anything to do with zero IF SDR's or radar stuff?
-  - In the mixer you built, why wouldn't the mixer go to zero IF? 
-  - What could be done if you want it to go to zero IF?
+
+For reference, the balun is used to create equal and opposite signals, which is illustrated below.
+<p align="center">
+  <img src="https://www.electronicspecifier.com/cms/images/Using%20a%20wideband%20balun%20with%20ADCs.jpg" width="400"> 
+  <p align = "center"> 'Figure 15: Usage of Balun'</p>
+</p>
+
+  - Going to DC is important to understand because it may be desired for different applications
+    - The diode ring mixer should "go to DC"
+      - Looking at the double balanced diode ring mixer, we see that the output IF is connected to the center tap of the transformer, which is directly connected to the diode ring. Thus, DC current is able to pass through the diodes
+    - The FET ring mixer should not "go to DC" 
+      - Looking at the double balanced FET ring mixer, the IF channel is connected to the primary windings of the balun, which blocks DC current. Thus, the FET ring cannot go to DC.       
+      - Hence, this explains why the FET ring mixer had a minimum IF of 30kHz 
+      - If one desires to have a FET ring go to DC, the balun can be replaced with a differential op amp or configuration that is differential and allows DC current to pass.
+    - The Gilbert Cell Mixer should be able to go to DC, as long as the differential output isnt coupled by a large capacitance. 
+  - Applications that require 0 Hz
+    - Digital communication
+    - CW Radars
+    - Sofware defined radios
+    - Phase detectors
 
 ## Conclusion
 At the end of this lab, key performance indicators of the FET ring mixer were documented and analyzed. Nonidealities were also observed, which resulted in discussions related to avoiding or improving such outcomes.

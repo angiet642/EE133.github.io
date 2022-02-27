@@ -71,8 +71,6 @@ The expected result is to see two peaks, one at 7 MHz (the difference of the two
 ### Mixer Performance Measurements
 A week later, the mixer in figure 3, along with the mixer in figure 4 was no longer functional. After careful debugging with a DMM and microscope, the conclusion was that a component in the assembly was "blown" and could not be recreated due to limited parts. Thus, the following measurements were taken from a third mixer of the same topology, but constructed by Kylee Krzanich.
 
-__Measurements__
-
 For this set up, the LO (12 MHz) is greater than the RF (2 MHz) signal. Thus, the system is a high-side down converter.
 
 | Figure #5  | Figure #6  |

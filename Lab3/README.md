@@ -26,7 +26,7 @@ __Some Definitions__
 - __Spurious responses (spurs):__ Unwanted frequencies that appear to be mixed in addition to the main frequencies of interest
 
 #### Types of Mixers
-There are several types of mixer circuits. For the purpose of this lab, the focus will be on double balanced mixers, which uses differential circuits at the input to minimize the presence of unwanted RF and LO signals at the output. Double balanced mixers are also widely used because they yield increased linearity and better supression of spurs. Some examples of double balanced mixers are shown below. This report will discuss the steps to build a FET ring in the following sections. 
+There are several types of mixer circuits. For the purpose of this lab, the focus will be on double balanced mixers, which uses differential circuits at the input to minimize the presence of unwanted RF and LO signals at the output. Double balanced mixers are also widely used because they yield increased linearity and better supression of spurs. Some examples of double balanced mixers are shown below. The following sections will discuss the steps to build a FET ring. 
 | Diode Ring  | FET Ring |  Gilbert Cell |
 |-------------------|-------------------| -------------------|
 | <img src="https://www.electronics-notes.com/images/mixer-double-balanced-circuit-01.svg" width="400"> | <img src="https://www.electronics-notes.com/images/mixer-double-balanced-fet-circuit-01.png" width="500"> |<img src="https://www.researchgate.net/profile/Giovanni-Piccinni/publication/320373836/figure/fig1/AS:590496279838720@1517796692383/Architecture-of-a-conventional-double-balanced-Gilbert-cell-mixer.png" width="600">

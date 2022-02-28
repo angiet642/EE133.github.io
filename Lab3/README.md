@@ -10,7 +10,7 @@ In this lab, a double balanced FET ring mixer was built. The choice to create a 
 __Definition of a mixer:__ A device that generates the sum or difference frequencies of two input signals. They can be referred to other names, such as modulators, demodulators, multipliers, synchronous detectors, phase detectors, upconverters or downconverters.
 
 __Real Life Applications of a Mixer__
-Mixers allow frequencies to be shifted from one frequency range to another. This is important because if data is transmitted simultaneously within the same frequency range of another signal, there will be interference. To receive both signals, we can shift the frequency range of the first signal to a different band and eliminate the possiblity of the two signals overlapping with one another. The idea of mixing frequencies is crucial for wireless communication, where WIFI data (for example) can only be sent over a 2.4 or 5.4 GHz channel. 
+Mixers allow frequencies to be shifted from one frequency range to another. This is important because if data is transmitted simultaneously within the same frequency range of another signal, there will be interference. To receive both signals, one can shift the frequency range of the first signal to a different band and eliminate the possiblity of the two signals overlapping with one another. The idea of mixing frequencies is crucial for wireless communication, where WIFI data (for example) can only be sent over a 2.4 or 5.4 GHz channel. 
 
 __Some Definitions__
 - __IF:__ Intermediate Frequency (output)
